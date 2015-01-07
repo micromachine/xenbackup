@@ -19,12 +19,14 @@ ch.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(ch)
 logger.info('Starting ...')
+##For optimised vm's
 def get_backup_vms():
     result = []
     result += [('2dcf9e13-b699-ea4b-b0fd-ea8dfe03593e','OK1')]
     result += [('011f8f21-790f-3145-9926-f8ed3a9fbe13','OK2')]
     return result
-def get_backup_vms_special():
+##For not optimised vm's (without xentools)
+def get_backup_vm_special():
     result_special = []
     result_special += [('2dcf9e13-b699-ea4b-b0fd-ea8dfe03593e','SP1')]
     result_special += [('011f8f21-790f-3145-9926-f8ed3a9fbe13','SP2')]
